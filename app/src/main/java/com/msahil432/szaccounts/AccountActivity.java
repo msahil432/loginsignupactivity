@@ -271,6 +271,7 @@ public class AccountActivity extends AppCompatActivity
                 object.accumulate("username", username);
                 object.accumulate("password", password);
                 object.accumulate("mail", mail);
+                Log.d("hey", object.toString());
                 recaptcha(object);
             }catch (Exception e){
                 e.printStackTrace();
