@@ -1,0 +1,84 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.msahil432.szaccounts.LoginScreen">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/wausernametext"
+            android:layout_margin="24dp"
+            app:mtf_cardCollapsedHeight="4dp"
+            app:mtf_animationDuration="1000"
+            app:mtf_image="@drawable/ic_media_play_dark"
+            app:mtf_labelColor="@android:color/holo_red_dark"
+            app:mtf_openKeyboardOnFocus="true">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/wals_username"
+                android:hint="Username"
+                android:maxLength="6"
+                android:textColor="#333"
+                android:textColorHint="#666"
+                android:inputType="text"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                android:textSize="24sp"/>
+
+        </com.github.florent37.materialtextfield.MaterialTextField>
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/wapaswordtext"
+            app:mtf_image="@drawable/ic_media_play_dark"
+            android:layout_margin="24dp"
+            android:layout_below="@id/wausernametext"
+            app:mtf_cardCollapsedHeight="4dp"
+            app:mtf_animationDuration="1000"
+            app:mtf_labelColor="@android:color/holo_red_dark"
+            app:mtf_openKeyboardOnFocus="true">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/wals_password"
+                android:textColor="#333"
+                android:textColorHint="#666"
+                android:hint="Password"
+                android:layout_marginLeft="24dp"
+                android:inputType="textPassword"
+                android:imeOptions="actionDone"
+                android:textSize="24sp"/>
+        </com.github.florent37.materialtextfield.MaterialTextField>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wapaswordtext"
+            android:onClick="loginButton"
+            android:text="Log in"
+            android:textSize="20sp"
+            android:layout_margin="24dp"
+            android:padding="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="160dp"/>
+
+        <ImageView
+            android:id="@+id/username_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/wausernametext"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="Username"
+            android:src="@drawable/ic_mr_button_connecting_10_dark"
+            android:tint="#d50000"
+            android:visibility="gone" />
+    </RelativeLayout>
+</ScrollView>
